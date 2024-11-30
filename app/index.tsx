@@ -1,15 +1,25 @@
-import { Text, View, Image } from "react-native";
-import perguntas from "@/data/constants/perguntas";
+import { View } from "react-native";
 import Pagina from "@/components/tamplate/Pagina";
 import Logo from "@/components/tamplate/Logo";
 import Enunciado from "@/components/questionario/Enunciado";
+import useQuestionario from "@/data/hooks/useQuestionario";
+import Resultado from "@/components/questionario/Resultado";
 
 export default function Index() {
+    const { pergunta, concluido, pontuacao, totalPerguntas, responder, reiniciar } = useQuestionario()
+
     return (
         <Pagina>
             <View>
                 <Logo/>
-                <Enunciado enunciado={perguntas[1]}/>
+                {concluido ? (
+                    <Resultado
+                        pontuacao={pontuacao}
+                        totalPerguntas={totalPerguntas}
+                        reiniciar={reiniciar}/>
+                ) : (
+                    <Enunciado enunciado={pergunta} opcaoSelecionada={responder} />
+                )}
             </View>
         </Pagina>
     )

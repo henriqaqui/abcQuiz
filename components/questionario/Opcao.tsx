@@ -16,21 +16,21 @@ export default function Opcao(props: OpcaoProps) {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#ffffff90',
-        padding: 15,
+        backgroundColor: '#00000070',
         marginHorizontal: 40,
+        marginVertical: 5,
         borderTopLeftRadius: 70,
         borderTopRightRadius: 10,
         borderBottomLeftRadius: 10,
         borderBottomRightRadius: 70,
         borderLeftWidth: 30,
-        borderLeftColor: '#5BC0EB',
+        borderLeftColor: '#ffffff90',
         borderRightWidth: 30,
-        borderRightColor: '#5BC0EB'
+        borderRightColor: '#ffffff90'
     },
     texto: {
-        color: '#131112',
-        fontSize: 50,
+        color: '#ffffff',
+        fontSize: 80,
         fontFamily: 'FrederickatheGreat-Regular',
         textAlign: 'center'
     }
